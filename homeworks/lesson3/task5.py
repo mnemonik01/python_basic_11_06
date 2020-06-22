@@ -10,24 +10,22 @@
 """
 
 
-def insert_sum(*args):
-    result = 0
-    exit_flag = False
-    for itm in args:
-        try:
-            result += float(itm)
-        except ValueError as e:
-            if itm == 'q':
-                exit_flag = not exit_flag
+def my_sum():
+    sum_res = 0
+    ex = False
+    while ex == False:
+        number = input('Input numbers or Q for quit - ').split()
+
+        res = 0
+        for el in range(len(number)):
+            if number[el] == 'q' or number[el] == 'Q':
+                ex = True
                 break
+            else:
+                res = res + int(number[el])
+        sum_res = sum_res + res
+        print(f'Current sum is {sum_res}')
+    print(f'Your final sum is {sum_res}')
 
-    return result, exit_flag
 
-
-user_exit = False
-user_sum = 0
-while not user_exit:
-    user_input = input('введите числа через пробел\n').split(' ')
-    result_summ, user_exit = insert_sum(*user_input)
-    user_sum += result_summ
-    print(f'сумма: {user_sum}')
+my_sum()

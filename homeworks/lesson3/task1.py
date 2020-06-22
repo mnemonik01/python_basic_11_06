@@ -5,23 +5,24 @@
 """
 
 
-def division(a: float, b: float) -> float:
-    """
-    делит а на b
-    :param a:
-    :param b:
-    :return: float or None
-    """
+def div(*args):
     try:
-        return a / b
-    except ZeroDivisionError as e:
-        print('Нельзя делить на ноль')
+        arg1 = int(input("Input dividend "))
+        arg2 = int(input("Input divider "))
+        res = arg1 / arg2
+    except ValueError:
+        return 'Value error'
+    except ZeroDivisionError:
+        return "Wrong devider! You can't use zero as a devider"
+
+    return res
+
+    '''
+    if arg2 != 0:
+        return arg1 / arg2
+    else:
+        print("Wrong number! Devider can't be null")
+    '''
 
 
-division2 = lambda a, b: a / b if b else None
-
-assert division(4, 2) == 2, 'division(4, 2) SOME TEXT'
-assert division(14, 2) == 7, 'division(14, 2)'
-assert division(0, 2) == 0, 'division(0, 2)'
-assert division(-22, 4) == -5.5, 'division(-22, 4)'
-assert division(1, 0) is None, 'division(1, 0)'
+print(f'result  {div()}')
