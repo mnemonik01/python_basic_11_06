@@ -11,7 +11,7 @@ def div(*args):
         arg2 = int(input("Введите делитель"))
         res = arg1 / arg2
     except ValueError:
-        return 'Value error'
+        return 'Ошибка!'
     except ZeroDivisionError:
         return "Неверный делитель. на 0 делить нельзя"
 
