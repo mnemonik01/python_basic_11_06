@@ -14,7 +14,7 @@ def my_sum():
     sum_res = 0
     ex = False
     while ex == False:
-        number = input('Input numbers or Q for quit - ').split()
+        number = input('Введите ваши числа, либо нажмите Q для выхода из программы - ').split()
 
         res = 0
         for el in range(len(number)):

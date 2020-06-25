@@ -7,13 +7,13 @@
 
 def div(*args):
     try:
-        arg1 = int(input("Input dividend "))
-        arg2 = int(input("Input divider "))
+        arg1 = int(input("Введите делимое"))
+        arg2 = int(input("Введите делитель"))
         res = arg1 / arg2
     except ValueError:
         return 'Value error'
     except ZeroDivisionError:
-        return "Wrong devider! You can't use zero as a devider"
+        return "Неверный делитель. на 0 делить нельзя"
 
     return res
 
@@ -21,7 +21,7 @@ def div(*args):
     if arg2 != 0:
         return arg1 / arg2
     else:
-        print("Wrong number! Devider can't be null")
+        print("Делимое должно быть числом")
     '''
 
 
