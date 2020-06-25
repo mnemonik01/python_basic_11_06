@@ -11,7 +11,6 @@
 Необходимо использовать написанную ранее функцию int_func().
 """
 
-
 def int_func(*args):
     word = input("Input words ")
     print(word.title())
