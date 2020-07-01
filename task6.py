@@ -16,6 +16,7 @@
 '''
 # import json
 
+
 subj = {}
 with open('file_6.txt', 'r') as init_f:
     for line in init_f:

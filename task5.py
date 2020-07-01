@@ -4,6 +4,7 @@
     подсчитывать сумму чисел в файле и выводить ее на экран.
 '''
 
+
 def summary():
     try:
         with open('file_5.txt', 'w+') as file_obj:
